@@ -20,7 +20,13 @@ FROM students_info;
 SELECT *
 FROM students_info_staging;
 ----------------------------------------------------------------------------------------------------------------------------------------------
+CREATE TABLE students_info_staging_3 AS
+SELECT * FROM students_info;
 
+SELECT *
+FROM students_info_staging_3;
+
+----------------------------------------------------------------------------------------------------------------------------------------------
 DESCRIBE students_info_staging;
 
 ALTER TABLE students_info_staging
