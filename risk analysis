@@ -1,4 +1,0 @@
-import pandas as pd
-
-risk_analysis = pd.read_csv(r"C:\Users\hp\OneDrive\Projects\Victoria Solutions\raw_dataset_week4.csv")
-risk_analysis
