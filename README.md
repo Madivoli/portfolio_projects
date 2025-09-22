@@ -1,1 +1,3 @@
-This repository will contain all the code and queries from the portfolio projects I create.
+Students' Mental Health - Data Cleaning and Analysis in MySQL - Full Project
+
+Project Overview
