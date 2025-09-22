@@ -23,7 +23,7 @@ Does going to university in a different country affect your mental health? A Jap
 
 ## EXPLORATORY DATA ANALYSIS
 
-●	Performed descriptive analysis using the AVG, SUM, MIN, MAX, COUNT, and DISTINCT COUNT functions.
+● Performed descriptive analysis using the AVG, SUM, MIN, MAX, COUNT, and DISTINCT COUNT functions.
 ● Calculated the frequency distributions using a WHERE clause. There are 67 domestic students, 201 international students, 47 undergraduate students, and 21 graduate students.
 ● Calculated summary statistics utilising AVERAGE, MINIMUM, MAXIMUM, MEAN and STANDARD DEVIATION functions. 
 ● On average, students remain enrolled at the university for approximately 2.15 years, with a minimum duration of 1 year and a maximum of 10 years. 
