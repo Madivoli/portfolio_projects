@@ -8,27 +8,16 @@ Does going to university in a different country affect your mental health? A Jap
 ## DATA PROCESSING, CLEANING AND MANIPULATION
 
 ●	Cleaned and analysed 286 Students' Mental Health data in PostgreSQL.
-
 ●	Created a Staging Table to help in the Extract, Transform, Load (ETL) process.
-
 ●	Utilised the INSERT INTO statement to update the staging table.
-
 ●	Renamed columns using the ALTER TABLE statement and RENAME COLUMN clause.
-
 ●	Added columns using the ALTER TABLE statement and the ADD COLUMN clause.
-
 ●	Deleted unused columns using the ALTER TABLE statement and the DROP COLUMN clause.
-
 ●	Identified and deleted duplicates using the ROW_NUMBER () OVER (PARTITION BY) statements; 56 records had duplicate values.
-
 ●	Trimmed whitespaces using the TRIM () function.
-
 ●	To find and replace inconsistent values, the REPLACE function was utilised.
-
 ●	To ensure all texts are in the same case, functions like UPPER (), LOWER (), or INITCAP () were applied.
-
 ●	COALESCE and CASE statements were used to manage null values and classify data.
-
 ●	Created a BIN column and updated the calculated values.
 
 
