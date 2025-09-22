@@ -1,10 +1,11 @@
 ## STUDENTS' MENTAL HEALTH - DATA CLEANING AND ANALYSIS IN MYSQL - FULL PROJECT
 
-PROJECT OVERVIEW:
+## PROJECT OVERVIEW:
+
 Does going to university in a different country affect your mental health? A Japanese international university surveyed its students in 2018 and found that international students have a higher risk of mental health difficulties than the general population, and that social connectedness (belonging to a social group) and acculturative stress (stress associated with joining a new culture) are predictive of depression. The project aims to explore 286 student records using MySQL to determine if a similar conclusion can be drawn for international students and whether the length of stay is a contributing factor.
 
 
-DATA PROCESSING, CLEANING AND MANIPULATION
+## DATA PROCESSING, CLEANING AND MANIPULATION
 
 ●	Cleaned and analysed 286 Students' Mental Health data in PostgreSQL
 ●	Created a Staging Table to help in the Extract, Transform, Load (ETL) process.
@@ -20,7 +21,7 @@ DATA PROCESSING, CLEANING AND MANIPULATION
 ●	Created a BIN column and updated the calculated values.
 
 
-EXPLORATORY DATA ANALYSIS
+## EXPLORATORY DATA ANALYSIS
 
 ●	Performed descriptive analysis using the AVG, SUM, MIN, MAX, COUNT, and DISTINCT COUNT functions.
 ●	Calculated the frequency distributions using a WHERE clause. There are 67 domestic students, 201 international students, 47 undergraduate students, and 21 graduate students.
@@ -29,7 +30,8 @@ EXPLORATORY DATA ANALYSIS
 ● The standard deviation of about 1.33 suggests that there is fairly consistent variability in the length of stay among students.
 
 
-INFERENTIAL STATISTICS
+## INFERENTIAL STATISTICS
+
 ## Depression and International/Domestic Status
 Coefficient: 0.07138804926
 ● The coefficient suggests **a very weak positive correlation**.
@@ -67,7 +69,7 @@ Correlation: 0.3685
 ● There is a **weak positive correlation** between length of stay and acculturative stress **(r = 0.0040)**, implying nearly no linear relationship between 
 
 
-CONCLUSION
+## CONCLUSION
 
 **In summary, the correlation analysis reveals that neither a student's international/domestic status nor their gender demonstrates a significant linear relationship with their depression score**.
 
