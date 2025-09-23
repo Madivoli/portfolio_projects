@@ -7,27 +7,55 @@ Does going to university in a different country affect your mental health? A Jap
 
 ## DATA PROCESSING, CLEANING AND MANIPULATION
 
-●	Cleaned and analysed 286 Students' Mental Health data in PostgreSQL.
-●	Created a Staging Table to help in the Extract, Transform, Load (ETL) process.
-●	Utilised the INSERT INTO statement to update the staging table.
-●	Renamed columns using the ALTER TABLE statement and RENAME COLUMN clause.
-●	Added columns using the ALTER TABLE statement and the ADD COLUMN clause.
-●	Deleted unused columns using the ALTER TABLE statement and the DROP COLUMN clause.
-●	Identified and deleted duplicates using the ROW_NUMBER () OVER (PARTITION BY) statements; 56 records had duplicate values.
-●	Trimmed whitespaces using the TRIM () function.
-●	To find and replace inconsistent values, the REPLACE function was utilised.
-●	To ensure all texts are in the same case, functions like UPPER (), LOWER (), or INITCAP () were applied.
-●	COALESCE and CASE statements were used to manage null values and classify data.
-●	Created a BIN column and updated the calculated values.
+- Creating a staging table
+    CREATE TABLE students_info_staging 
+    LIKE students_info;
+
+    INSERT students_info_staging
+    SELECT *
+    FROM students_info;
+
+    SELECT *
+    FROM students_info_staging;
+
+- Data processing and cleaning
+
+    DESCRIBE students_info_staging;
+
+    ALTER TABLE students_info_staging
+    RENAME COLUMN `ï»¿index` TO `index`;
+
+  - The index column had a BOM.
+  - This is a common issue that arises when a CSV file is imported with a Byte Order Mark (BOM). 
+  - The BOM is a special character at the beginning of a file that indicates the encoding.
+  - Some database systems, when importing the file, mistakenly include this character as part of the first column's name.
+  - As a result, the column name becomes something unexpected like ï»¿index instead of just index.
+
+
+  
+- 
+
+  ●	Cleaned and analysed 286 Students' Mental Health data in PostgreSQL.
+  ●	Created a Staging Table to help in the Extract, Transform, Load (ETL) process.
+  ●	Utilised the INSERT INTO statement to update the staging table.
+  ●	Renamed columns using the ALTER TABLE statement and RENAME COLUMN clause.
+  ●	Added columns using the ALTER TABLE statement and the ADD COLUMN clause.
+  ●	Deleted unused columns using the ALTER TABLE statement and the DROP COLUMN clause.
+  ●	Identified and deleted duplicates using the ROW_NUMBER () OVER (PARTITION BY) statements; 56 records had duplicate values.
+  ●	Trimmed whitespaces using the TRIM () function.
+  ●	To find and replace inconsistent values, the REPLACE function was utilised.
+  ●	To ensure all texts are in the same case, functions like UPPER (), LOWER (), or INITCAP () were applied.
+  ●	COALESCE and CASE statements were used to manage null values and classify data.
+  ●	Created a BIN column and updated the calculated values.
 
 
 ## EXPLORATORY DATA ANALYSIS
 
-● Performed descriptive analysis using the AVG, SUM, MIN, MAX, COUNT, and DISTINCT COUNT functions.
-● Calculated the frequency distributions using a WHERE clause. There are 67 domestic students, 201 international students, 47 undergraduate students, and 21 graduate students.
-● Calculated summary statistics utilising AVERAGE, MINIMUM, MAXIMUM, MEAN and STANDARD DEVIATION functions. 
-● On average, students remain enrolled at the university for approximately 2.15 years, with a minimum duration of 1 year and a maximum of 10 years. 
-● The standard deviation of about 1.33 suggests that there is fairly consistent variability in the length of stay among students.
+  ● Performed descriptive analysis using the AVG, SUM, MIN, MAX, COUNT, and DISTINCT COUNT functions.
+  ● Calculated the frequency distributions using a WHERE clause. There are 67 domestic students, 201 international students, 47 undergraduate students, and 21 graduate students.
+  ● Calculated summary statistics utilising AVERAGE, MINIMUM, MAXIMUM, MEAN and STANDARD DEVIATION functions. 
+  ● On average, students remain enrolled at the university for approximately 2.15 years, with a minimum duration of 1 year and a maximum of 10 years. 
+  ● The standard deviation of about 1.33 suggests that there is fairly consistent variability in the length of stay among students.
 
 
 ## INFERENTIAL STATISTICS
