@@ -60,7 +60,7 @@ Step 3. Checking what will be deleted using a SUBQUERY
             ) AS subquery
             WHERE row_num > 1
 
-**Results:** 141 records will be affected.
+**Results:** 141 row(s) affected.
 
 
 Step 4. Removing duplicate records using a WHERE clause
@@ -75,8 +75,23 @@ Step 4. Removing duplicate records using a WHERE clause
             FROM students_info_staging
                 ) AS duplicate_cte ON t.`index` = duplicate_cte.`index`
                 WHERE duplicate_cte.row_num > 1;
+                
+**Results: **127 row(s) returned
 
-- 
+- Standardising data
+
+        UPDATE students_info_staging
+        SET inter_dom = 'Domestic'
+        WHERE inter_dom = 'Dom';
+
+**Results:** 31 row(s) affected Rows matched: 31  Changed: 31  Warnings: 0
+
+        UPDATE students_info_staging
+        SET academic = 'Graduate'
+        WHERE academic = 'Grad';
+
+**Results:** 20 row(s) affected Rows matched: 20  Changed: 20  Warnings: 0
+
 - 
 
   ●	Cleaned and analysed 286 Students' Mental Health data in PostgreSQL.
