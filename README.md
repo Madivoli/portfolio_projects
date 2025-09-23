@@ -19,12 +19,16 @@ Does going to university in a different country affect your mental health? A Jap
         SELECT *
         FROM students_info_staging;
 
-- Data processing and cleaning
+- Renaming a column
 
         DESCRIBE students_info_staging;
 
+<img width="1111" height="226" alt="image" src="https://github.com/user-attachments/assets/fa805085-bea1-4250-9abf-34d7f14433a3" />
+        
         ALTER TABLE students_info_staging
         RENAME COLUMN `ï»¿index` TO `index`;
+
+
 
   - The index column had a BOM.
   - This is a common issue that arises when a CSV file is imported with a Byte Order Mark (BOM).
@@ -42,6 +46,11 @@ To fix this issue, one should do one of the following:
         -- You can often do this by saving the file with a different encoding, such as UTF-8 without BOM. 
         -- Then, re-import the clean file into your database.
   
+- Identifying duplicate values
+
+
+
+
 - 
 
   ●	Cleaned and analysed 286 Students' Mental Health data in PostgreSQL.
