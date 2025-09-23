@@ -8,28 +8,29 @@ Does going to university in a different country affect your mental health? A Jap
 ## DATA PROCESSING, CLEANING AND MANIPULATION
 
 - Creating a staging table
-    CREATE TABLE students_info_staging 
-    LIKE students_info;
 
-    INSERT students_info_staging
-    SELECT *
-    FROM students_info;
+        CREATE TABLE students_info_staging 
+        LIKE students_info;
 
-    SELECT *
-    FROM students_info_staging;
+        INSERT students_info_staging
+        SELECT *
+        FROM students_info;
+
+        SELECT *
+        FROM students_info_staging;
 
 - Data processing and cleaning
 
-    DESCRIBE students_info_staging;
+        DESCRIBE students_info_staging;
 
-    ALTER TABLE students_info_staging
-    RENAME COLUMN `ï»¿index` TO `index`;
+        ALTER TABLE students_info_staging
+        RENAME COLUMN `ï»¿index` TO `index`;
 
-  - The index column had a BOM.
-  - This is a common issue that arises when a CSV file is imported with a Byte Order Mark (BOM). 
-  - The BOM is a special character at the beginning of a file that indicates the encoding.
-  - Some database systems, when importing the file, mistakenly include this character as part of the first column's name.
-  - As a result, the column name becomes something unexpected like ï»¿index instead of just index.
+      - The index column had a BOM.
+      - This is a common issue that arises when a CSV file is imported with a Byte Order Mark (BOM). 
+      - The BOM is a special character at the beginning of a file that indicates the encoding.
+      - Some database systems, when importing the file, mistakenly include this character as part of the first column's name.
+      - As a result, the column name becomes something unexpected like ï»¿index instead of just index.
 
 
   
