@@ -76,10 +76,11 @@ Step 4. Removing duplicate records using a WHERE clause
                 ) AS duplicate_cte ON t.`index` = duplicate_cte.`index`
                 WHERE duplicate_cte.row_num > 1;
                 
-**Results: **127 row(s) returned
+**Results:** 127 row(s) returned
 
 - Standardising data
-
+-- REPLACE function
+  
         UPDATE students_info_staging
         SET inter_dom = 'Domestic'
         WHERE inter_dom = 'Dom';
@@ -92,7 +93,27 @@ Step 4. Removing duplicate records using a WHERE clause
 
 **Results:** 20 row(s) affected Rows matched: 20  Changed: 20  Warnings: 0
 
-- 
+-- TRIM function
+        SELECT *,
+        LTRIM(inter_dom)
+        FROM students_info_staging;
+
+**Results:** 127 row(s) returned
+
+        SELECT *,
+        TRIM(stay_cate)
+        FROM students_info_staging;
+        
+**Results:** 127 row(s) returned
+
+- Addressing NULL or BLANK values
+
+--- Using a COALESCE function
+
+        SELECT COALESCE(intimate, 'Unknown') AS intimate,
+	   COALESCE(internet, '0') AS internet
+        FROM students_info_staging;
+
 
   ●	Cleaned and analysed 286 Students' Mental Health data in PostgreSQL.
   ●	Created a Staging Table to help in the Extract, Transform, Load (ETL) process.
