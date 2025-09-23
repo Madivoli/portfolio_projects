@@ -10,47 +10,73 @@ Does going to university in a different country affect your mental health? A Jap
 - Creating a staging table
 
         CREATE TABLE students_info_staging 
-        LIKE students_info;
+        LIKE mental_health;
 
         INSERT students_info_staging
         SELECT *
-        FROM students_info;
+        FROM mental_health;
 
         SELECT *
         FROM students_info_staging;
 
-- Renaming a column
-
-        DESCRIBE students_info_staging;
-
-<img width="1111" height="226" alt="image" src="https://github.com/user-attachments/assets/fa805085-bea1-4250-9abf-34d7f14433a3" />
-        
-        ALTER TABLE students_info_staging
-        RENAME COLUMN `ï»¿index` TO `index`;
-
-
-
-  - The index column had a BOM.
-  - This is a common issue that arises when a CSV file is imported with a Byte Order Mark (BOM).
-  - The BOM is a special character at the beginning of a file that indicates the encoding.
-  - Some database systems, when importing the file, mistakenly include this character as part of the first column's name.
-  - As a result, the column name becomes something unexpected like ï»¿index instead of just index.
-
-To fix this issue, one should do one of the following:
-
-        1. Find the correct column name: Use a command like DESCRIBE students_info_staging to see the exact names of all columns in the table. 
-        Then, use that exact name in your ALTER TABLE query.
-
-        2. If it doesn't update properly:
-        -- Re-export the CSV file from its source without the BOM. 
-        -- You can often do this by saving the file with a different encoding, such as UTF-8 without BOM. 
-        -- Then, re-import the clean file into your database.
+ 
+- Data cleaning
   
-- Identifying duplicate values
+Step 1. Identifying row numbers
+
+        SELECT *,
+        ROW_NUMBER() OVER(
+        PARTITION BY inter_dom, region, gender, academic, age, stay, stay_cate) AS row_num
+        FROM students_info_staging;
+
+Step 2. Identifying duplicate rows using a CTE
+  
+        WITH duplicate_cte AS
+        (
+        SELECT *,
+        ROW_NUMBER() OVER(
+        PARTITION BY inter_dom, region, gender, academic, age, stay, stay_cate, age, phone_bi) AS row_num
+        FROM students_info_staging
+        )
+
+        SELECT *
+        FROM duplicate_cte
+        WHERE row_num > 1;
+
+A row_num column was added to assist in identifying duplicate records.
 
 
+Step 3. Checking what will be deleted using a SUBQUERY
+
+        DELETE FROM students_info_staging 
+        WHERE `index` IN (
+            SELECT `index` FROM (
+                SELECT `index`,
+                       ROW_NUMBER() OVER(
+                           PARTITION BY inter_dom, region, gender, academic, age, stay, stay_cate, phone_bi 
+                           ORDER BY `index`
+                               ) AS row_num
+                FROM students_info_staging
+            ) AS subquery
+            WHERE row_num > 1
+
+**Results:** 141 records will be affected.
 
 
+Step 4. Removing duplicate records using a WHERE clause
+
+       DELETE t FROM students_info_staging AS t
+                JOIN (
+            SELECT `index`,
+                   ROW_NUMBER() OVER(
+                       PARTITION BY inter_dom, region, gender, academic, age, stay, stay_cate, phone_bi 
+               ORDER BY `index`
+                   ) AS row_num
+            FROM students_info_staging
+                ) AS duplicate_cte ON t.`index` = duplicate_cte.`index`
+                WHERE duplicate_cte.row_num > 1;
+
+- 
 - 
 
   ●	Cleaned and analysed 286 Students' Mental Health data in PostgreSQL.
