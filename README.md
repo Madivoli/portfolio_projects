@@ -8,7 +8,6 @@ Does going to university in a different country affect your mental health? A Jap
 ## DATA PROCESSING, CLEANING AND MANIPULATION
 
 - Creating a staging table
-  
     CREATE TABLE students_info_staging 
     LIKE students_info;
 
