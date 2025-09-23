@@ -32,7 +32,15 @@ Does going to university in a different country affect your mental health? A Jap
   - Some database systems, when importing the file, mistakenly include this character as part of the first column's name.
   - As a result, the column name becomes something unexpected like ï»¿index instead of just index.
 
+To fix this issue, one should do one of the following:
 
+        1. Find the correct column name: Use a command like DESCRIBE students_info_staging to see the exact names of all columns in the table. 
+        Then, use that exact name in your ALTER TABLE query.
+
+        2. If it doesn't update properly:
+        -- Re-export the CSV file from its source without the BOM. 
+        -- You can often do this by saving the file with a different encoding, such as UTF-8 without BOM. 
+        -- Then, re-import the clean file into your database.
   
 - 
 
