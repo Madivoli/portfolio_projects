@@ -194,7 +194,7 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 <img width="1110" height="141" alt="image" src="https://github.com/user-attachments/assets/a72b1fc3-5db6-4a63-af3b-93445c674943" />
 
---- Frequency Distribution:
+--- Frequency Distributions:
 
 		SELECT gender, age_group, COUNT(age) AS age
 		FROM students_info_staging
@@ -202,6 +202,21 @@ Step 4. Removing duplicate records using a WHERE clause:
 		ORDER BY COUNT(age) DESC;
 		
 <img width="1037" height="452" alt="image" src="https://github.com/user-attachments/assets/b94dab3b-48cf-4e3f-ac39-bfdb67ad643d" />
+
+		SELECT
+    		inter_dom AS student_type,
+    		age_group,
+    		COUNT(*) AS frequency
+		FROM
+    		students_info_staging
+		GROUP BY
+    		inter_dom, age_group
+		ORDER BY
+    		frequency DESC;
+
+
+<img width="990" height="735" alt="image" src="https://github.com/user-attachments/assets/7f6f884d-1a0d-49e1-931f-338d5bc453c0" />
+
 
 
 ## EXPLORATORY DATA ANALYSIS
