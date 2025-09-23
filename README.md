@@ -7,7 +7,7 @@ Does going to university in a different country affect your mental health? A Jap
 
 ## DATA PROCESSING, CLEANING AND MANIPULATION
 
-- Creating a staging table
+- Creating a staging table:
 
         CREATE TABLE students_info_staging 
         LIKE mental_health;
@@ -22,14 +22,14 @@ Does going to university in a different country affect your mental health? A Jap
  
 - Data cleaning
   
-Step 1. Identifying row numbers
+Step 1. Identifying row numbers:
 
         SELECT *,
         ROW_NUMBER() OVER(
         PARTITION BY inter_dom, region, gender, academic, age, stay, stay_cate) AS row_num
         FROM students_info_staging;
 
-Step 2. Identifying duplicate rows using a CTE
+Step 2. Identifying duplicate rows using a CTE:
   
         WITH duplicate_cte AS
         (
@@ -46,7 +46,7 @@ Step 2. Identifying duplicate rows using a CTE
 A row_num column was added to assist in identifying duplicate records.
 
 
-Step 3. Checking what will be deleted using a SUBQUERY
+Step 3. Checking what will be deleted using a SUBQUERY:
 
         DELETE FROM students_info_staging 
         WHERE `index` IN (
@@ -63,7 +63,7 @@ Step 3. Checking what will be deleted using a SUBQUERY
 **Results:** 141 row(s) affected.
 
 
-Step 4. Removing duplicate records using a WHERE clause
+Step 4. Removing duplicate records using a WHERE clause:
 
        DELETE t FROM students_info_staging AS t
                 JOIN (
@@ -79,7 +79,8 @@ Step 4. Removing duplicate records using a WHERE clause
 **Results:** 127 row(s) returned
 
 - Standardising data
--- REPLACE function
+  
+--- REPLACE function:
   
         UPDATE students_info_staging
         SET inter_dom = 'Domestic'
@@ -93,7 +94,7 @@ Step 4. Removing duplicate records using a WHERE clause
 
 **Results:** 20 row(s) affected Rows matched: 20  Changed: 20  Warnings: 0
 
--- TRIM function
+--- TRIM function:
         SELECT *,
         LTRIM(inter_dom)
         FROM students_info_staging;
@@ -108,25 +109,99 @@ Step 4. Removing duplicate records using a WHERE clause
 
 - Addressing NULL or BLANK values
 
---- Using a COALESCE function
+--- Using a COALESCE function:
 
-        SELECT COALESCE(intimate, 'Unknown') AS intimate,
-	   COALESCE(internet, '0') AS internet
-        FROM students_info_staging;
+		SELECT COALESCE(intimate, 'Unknown') AS intimate,
+		COALESCE(internet, '0') AS internet
+		FROM students_info_staging;
+
+--- Using a COALESCE function within the SET clause:
+
+		UPDATE students_info_staging
+		SET intimate = COALESCE(intimate, 'Unknown'),
+    	internet = COALESCE(internet, '0');
 
 
-  ●	Cleaned and analysed 286 Students' Mental Health data in PostgreSQL.
-  ●	Created a Staging Table to help in the Extract, Transform, Load (ETL) process.
-  ●	Utilised the INSERT INTO statement to update the staging table.
-  ●	Renamed columns using the ALTER TABLE statement and RENAME COLUMN clause.
-  ●	Added columns using the ALTER TABLE statement and the ADD COLUMN clause.
-  ●	Deleted unused columns using the ALTER TABLE statement and the DROP COLUMN clause.
-  ●	Identified and deleted duplicates using the ROW_NUMBER () OVER (PARTITION BY) statements; 56 records had duplicate values.
-  ●	Trimmed whitespaces using the TRIM () function.
-  ●	To find and replace inconsistent values, the REPLACE function was utilised.
-  ●	To ensure all texts are in the same case, functions like UPPER (), LOWER (), or INITCAP () were applied.
-  ●	COALESCE and CASE statements were used to manage null values and classify data.
-  ●	Created a BIN column and updated the calculated values.
+- However, the COALESCE function only works on NULL values. 
+- It won't affect columns that contain empty strings ('') or strings with only whitespace
+- To fix this, check for these empty strings and replace them. 
+- Use a CASE statement to check for both NULL and empty strings.
+
+--- Using a CASE statement: 
+
+		UPDATE students_info_staging
+		SET intimate = CASE
+                   WHEN intimate IS NULL OR TRIM(intimate) = '' THEN 'Unknown'
+                   ELSE intimate
+               END,
+    		internet = CASE
+                   WHEN internet IS NULL OR TRIM(internet) = '' THEN 'Unknown'
+                   ELSE internet
+               END;
+
+
+## EXPLORATORY DATA ANALYSIS
+
+--- Creating age bins:
+
+		SELECT
+    		age,
+    		CASE
+        		WHEN CAST(age AS SIGNED) >= 15 AND CAST(age AS SIGNED) <= 19 THEN '15-19'
+        		WHEN CAST(age AS SIGNED) >= 20 AND CAST(age AS SIGNED) <= 24 THEN '20-24'
+        		WHEN CAST(age AS SIGNED) >= 25 AND CAST(age AS SIGNED) <= 29 THEN '25-29'
+        		WHEN CAST(age AS SIGNED) >= 30 AND CAST(age AS SIGNED) <= 34 THEN '30-34'
+        		WHEN CAST(age AS SIGNED) >= 35 THEN '35+'
+        	ELSE 'Unknown'
+    		END AS age_group
+		FROM
+    		students_info_staging
+		WHERE
+    		age IS NOT NULL
+		LIMIT 50;   
+
+--- Creating a new bin column: 
+
+		ALTER TABLE students_info_staging
+		ADD COLUMN age_group VARCHAR(10);
+
+--- Updating the column with calculated values
+
+		UPDATE students_info_staging
+		SET age_group = CASE
+    		WHEN CAST(age AS SIGNED) >= 15 AND CAST(age AS SIGNED) <= 19 THEN '15-19'
+    		WHEN CAST(age AS SIGNED) >= 20 AND CAST(age AS SIGNED) <= 24 THEN '20-24'
+    		WHEN CAST(age AS SIGNED) >= 25 AND CAST(age AS SIGNED) <= 29 THEN '25-29'
+    		WHEN CAST(age AS SIGNED) >= 30 AND CAST(age AS SIGNED) <= 34 THEN '30-34'
+    		WHEN CAST(age AS SIGNED) >= 35 THEN '35+'
+    	ELSE 'Unknown'
+		END;
+
+--- Descriptive Statistics:
+
+		SELECT 
+			gender,
+			AVG(age) AS avg_age,
+			COUNT(age_cate) AS category,
+			AVG(tosc) AS avg_social_connectedness ,
+			SUM(apd) AS sum_apd,
+			MIN(ahome) AS min_ahome,
+			MAX(aph) AS max_aph,
+			COUNT(DISTINCT region) AS region
+		FROM students_info_staging
+		WHERE gender = 'Male' OR gender = 'Female'
+		GROUP BY gender;
+
+<img width="1110" height="141" alt="image" src="https://github.com/user-attachments/assets/a72b1fc3-5db6-4a63-af3b-93445c674943" />
+
+--- Frequency Distribution:
+
+		SELECT gender, age_group, COUNT(age) AS age
+		FROM students_info_staging
+		GROUP BY gender, age_group, age
+		ORDER BY COUNT(age) DESC;
+		
+<img width="1037" height="452" alt="image" src="https://github.com/user-attachments/assets/b94dab3b-48cf-4e3f-ac39-bfdb67ad643d" />
 
 
 ## EXPLORATORY DATA ANALYSIS
