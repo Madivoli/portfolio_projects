@@ -209,7 +209,7 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 <img width="1110" height="141" alt="image" src="https://github.com/user-attachments/assets/a72b1fc3-5db6-4a63-af3b-93445c674943" />
 
---- Frequency Distributions:
+--- Frequency distributions:
 
 		SELECT gender, age_group, COUNT(age) AS age
 		FROM students_info_staging
@@ -232,30 +232,48 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 <img width="990" height="735" alt="image" src="https://github.com/user-attachments/assets/7f6f884d-1a0d-49e1-931f-338d5bc453c0" />
 
+--- Inferential Statistics
+	● Correlation between inter_dom and todep:
 
+		SELECT
+    		(COUNT(*) * SUM((inter_dom = 'International') * todep) - SUM(inter_dom = 'International') * SUM(todep)) /
+    		(SQRT(COUNT(*) * SUM(inter_dom = 'International') - SUM(inter_dom = 'International') * SUM(inter_dom = 'International')) *
+     		SQRT(COUNT(*) * SUM(todep * todep) - SUM(todep) * SUM(todep))) AS inter_dom_corr,
+    
+	● Correlation between gender and todep:
+	 
+    		(COUNT(*) * SUM((gender = 'Male') * todep) - SUM(gender = 'Male') * SUM(todep)) /
+    		(SQRT(COUNT(*) * SUM(gender = 'Male') - SUM(gender = 'Male') * SUM(gender = 'Male')) *
+     		SQRT(COUNT(*) * SUM(todep * todep) - SUM(todep) * SUM(todep))) AS gender_corr
+		FROM students_info_staging
+		WHERE inter_dom IN ('International', 'Domestic')
+		AND gender IN ('Male', 'Female');
 
-## EXPLORATORY DATA ANALYSIS
+<img width="949" height="118" alt="image" src="https://github.com/user-attachments/assets/90612b52-de4a-4dd4-a6c7-e94772315ac1" />
 
-  ● Performed descriptive analysis using the AVG, SUM, MIN, MAX, COUNT, and DISTINCT COUNT functions.
-  ● Calculated the frequency distributions using a WHERE clause. There are 67 domestic students, 201 international students, 47 undergraduate students, and 21 graduate students.
-  ● Calculated summary statistics utilising AVERAGE, MINIMUM, MAXIMUM, MEAN and STANDARD DEVIATION functions. 
-  ● On average, students remain enrolled at the university for approximately 2.15 years, with a minimum duration of 1 year and a maximum of 10 years. 
-  ● The standard deviation of about 1.33 suggests that there is fairly consistent variability in the length of stay among students.
+**Results**
+	## Depression and International/Domestic Status
+	Coefficient: 0.07138804926
+	● The coefficient suggests **a very weak positive correlation**.
+	● Given that the value is close to zero, there is **no significant linear relationship** between a student's status as either international or domestic and their depression score.
+	● The slight positive value indicates that, on average, international students may have marginally higher depression scores than their domestic counterparts.
+	● However, this association is **statistically insignificant**.
+
+	## Depression and Gender
+	Correlation Coefficient: -0.0127866035
+	● This value signifies **a very weak negative correlation**.
+	● Since the coefficient is close to zero, there is **no linear relationship** between a student's gender and their depression score.
+	● The negative sign suggests that, on average, males may have slightly lower depression scores than females. However, this difference is minimal.
+
 
 
 ## INFERENTIAL STATISTICS
 
 ## Depression and International/Domestic Status
-Coefficient: 0.07138804926
-● The coefficient suggests **a very weak positive correlation**.
-● Given that the value is close to zero, there is **no significant linear relationship** between a student's status as either international or domestic and their depression score.
-● The slight positive value indicates that, on average, international students may have marginally higher depression scores than their domestic counterparts; however, this association is **statistically insignificant**.
 
-## Depression and Gender
-Correlation Coefficient: -0.0127866035
-● This value signifies **a very weak negative correlation**.
-● Since the coefficient is close to zero, there is **no linear relationship** between a student's gender and their depression score.
-● The negative sign suggests that, on average, males may have slightly lower depression scores than females. However, this difference is minimal.
+
+
+
   
 ## Depression and Social Connectedness
 Correlation: -0.5464
