@@ -6,6 +6,8 @@ Does going to university in a different country affect your mental health? A Jap
 
 ## DATA DICTIONARY
 
+The data contains the following columns:
+
 | Field Name    | Description                                      |
 | ------------- | ------------------------------------------------ |
 | `inter_dom`     | Types of students (international or domestic)   |
