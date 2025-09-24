@@ -232,7 +232,7 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 <img width="990" height="735" alt="image" src="https://github.com/user-attachments/assets/7f6f884d-1a0d-49e1-931f-338d5bc453c0" />
 
---- Inferential Statistics
+INFERENTIAL STATISTICS
 
 ## Correlation between students' status and depression:
 
@@ -254,14 +254,14 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 **Results**
 
-## Depression and students' (international or domestic) status
+Depression and students' (international or domestic) status
 	Coefficient: 0.07138804926
 	● The coefficient suggests **a very weak positive correlation**.
 	● Given that the value is close to zero, there is **no significant linear relationship** between a student's status as either international or domestic and their depression score.
 	● The slight positive value indicates that, on average, international students may have marginally higher depression scores than their domestic counterparts.
 	● However, this association is **statistically insignificant**.
 
-##  Depression and gender
+Depression and gender
 
 	Correlation Coefficient: -0.0127866035
 	● This value signifies **a very weak negative correlation**.
@@ -289,7 +289,7 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 **Results**:
 
-## Depression and social connectedness
+Depression and social connectedness
 
 	Correlation coefficient: -0.5464
 	● A **moderately strong negative** relationship exists between depression and social connectedness.
@@ -297,7 +297,7 @@ Step 4. Removing duplicate records using a WHERE clause:
 	● This implies that as students’ social connectedness (tosc) increases, their depression scores (todep) tend to decline.
 	● These findings align with established psychological theories and research, which frequently associate stronger social support and connections with lower levels of depression.
 
-## Depression and acculturative stress
+Depression and acculturative stress
 
 	Correlation coefficient: 0.3685
 	● There is a weak moderate positive correlation between depression and acculturative stress.
@@ -335,14 +335,14 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 **Results:**
 
-## Depression and length of stay
+Depression and length of stay
 	● A **weak positive correlation** exists between depression and length of stay **(r = 0.0631)**, indicating that as a student's duration of stay increases, there is minimal change in their level of depression. 
 
-## Length of stay and social connectedness
+Length of stay and social connectedness
 	● There is a  **weak negative relationship** between length of stay and social connectedness **(r = -0.0405)**, suggesting that the duration of stay has little to no effect on social connectedness.
 
 
-## Length of stay and acculturative Stress
+Length of stay and acculturative Stress
 	● There is a **weak positive correlation** between length of stay and acculturative stress **(r = 0.0040)**, implying nearly no linear relationship between 
 
 
