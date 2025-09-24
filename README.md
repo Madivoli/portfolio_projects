@@ -301,7 +301,7 @@ Depression and social connectedness
 Depression and acculturative stress
 
 	Correlation coefficient: 0.3685
-	● There is a weak moderate positive correlation between depression and acculturative stress.
+	● There is a weak, moderate positive correlation between depression and acculturative stress.
 	● A positive correlation indicates that as one variable increases, the other also tends to increase.
 	● Consequently, as a student's acculturative stress (toas) rises, their depression score (todep) also tends to increase.
 	● This finding aligns with existing psychological research, which frequently identifies the stress associated with adapting to a new culture as a risk factor for mental health issues such as depression.
