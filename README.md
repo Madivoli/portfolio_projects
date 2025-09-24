@@ -232,7 +232,7 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 <img width="990" height="735" alt="image" src="https://github.com/user-attachments/assets/7f6f884d-1a0d-49e1-931f-338d5bc453c0" />
 
-**INFERENTIAL STATISTICS**
+## INFERENTIAL STATISTICS
 
 ## Correlation between students' status and depression:
 
@@ -337,14 +337,17 @@ Depression and acculturative stress
 **Results:**
 
 Depression and length of stay
+
 	● A **weak positive correlation** exists between depression and length of stay **(r = 0.0631)**, indicating that as a student's duration of stay increases, there is minimal change in their level of depression. 
 
 Length of stay and social connectedness
+
 	● There is a  **weak negative relationship** between length of stay and social connectedness **(r = -0.0405)**, suggesting that the duration of stay has little to no effect on social connectedness.
 
 
-Length of stay and acculturative Stress
-	● There is a **weak positive correlation** between length of stay and acculturative stress **(r = 0.0040)**, implying nearly no linear relationship between 
+Length of stay and acculturative stress
+
+	● There is a **weak positive correlation** between length of stay and acculturative stress **(r = 0.0040)**, implying nearly no linear relationship between these two variables. 
 
 
 ## CONCLUSION
