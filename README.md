@@ -232,7 +232,7 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 <img width="990" height="735" alt="image" src="https://github.com/user-attachments/assets/7f6f884d-1a0d-49e1-931f-338d5bc453c0" />
 
-## INFERENTIAL STATISTICS
+**INFERENTIAL STATISTICS**
 
 ## Correlation between students' status and depression:
 
