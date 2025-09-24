@@ -1,0 +1,128 @@
+index,inter_dom,region,gender,academic,age,age_cate,stay,stay_cate,japanese,japanese_cate,english,english_cate,intimate,religion,suicide,dep,deptype,todep,depsev,tosc,apd,ahome,aph,afear,acs,aguilt,amiscell,toas,partner,friends,parents,relative,profess,phone,doctor,reli,alone,others,internet,partner_bi,friends_bi,parents_bi,relative_bi,professional_bi,phone_bi,doctor_bi,religion_bi,alone_bi,others_bi,internet_bi
+0,International,SEA,Male,Graduate,24,4,5,Long,3,Average,5,High,,Yes,No,No,No,0,Min,34,23,9,11,8,11,2,27,91,5,5,6,3,2,1,4,1,3,4,,Yes,Yes,Yes,No,No,No,No,No,No,No,No
+1,International,SEA,Male,Graduate,28,5,1,Short,4,High,4,High,,No,No,No,No,2,Min,48,8,7,5,4,3,2,10,39,7,7,7,4,4,4,4,1,1,1,,Yes,Yes,Yes,No,No,No,No,No,No,No,No
+2,International,SEA,Male,Graduate,25,4,6,Long,4,High,4,High,Yes,Yes,No,No,No,2,Min,41,13,4,7,6,4,3,14,51,3,3,3,1,1,2,1,1,1,1,,No,No,No,No,No,No,No,No,No,No,No
+3,International,EA,Female,Graduate,29,5,1,Short,2,Low,3,Average,No,No,No,No,No,3,Min,37,16,10,10,8,6,4,21,75,5,5,5,5,5,2,2,2,4,4,,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No
+4,International,EA,Female,Graduate,28,5,1,Short,1,Low,3,Average,Yes,No,No,No,No,3,Min,37,15,12,5,8,7,4,31,82,5,5,5,2,5,2,5,5,4,4,,Yes,Yes,Yes,No,Yes,No,Yes,Yes,No,No,No
+5,International,SEA,Male,Graduate,24,4,6,Long,3,Average,4,High,Yes,No,No,No,No,6,Mild,38,18,8,10,8,7,3,29,83,6,5,4,2,1,1,2,1,5,1,,Yes,Yes,No,No,No,No,No,No,Yes,No,No
+6,International,SA,Male,Graduate,23,4,1,Short,3,Average,5,High,Yes,No,No,No,No,3,Min,46,17,6,10,5,3,2,15,58,7,5,7,2,2,1,5,1,1,1,,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No
+7,International,SEA,Female,Graduate,30,5,2,Medium,1,Low,1,Low,Yes,Yes,Yes,No,No,9,Mild,41,16,20,19,15,11,6,40,127,7,2,2,2,6,2,1,1,3,1,,Yes,No,No,No,Yes,No,No,No,No,No,No
+8,International,SEA,Female,Graduate,25,4,4,Long,4,High,4,High,No,No,No,Yes,Other,7,Mild,36,22,12,13,13,10,6,33,109,4,4,4,4,4,4,4,4,4,4,,No,No,No,No,No,No,No,No,No,No,No
+9,International,Others,Male,Graduate,31,5,2,Medium,1,Low,4,High,Yes,Yes,No,No,No,3,Min,48,8,4,5,12,3,2,17,51,1,1,1,2,1,1,2,1,2,1,,No,No,No,No,No,No,No,No,No,No,No
+10,International,Others,Female,Graduate,28,5,1,Short,1,Low,2,Low,No,Yes,No,No,No,5,Mild,32,24,8,10,8,6,6,30,92,7,3,7,7,3,1,3,1,3,5,,Yes,No,Yes,Yes,No,No,No,No,No,Yes,No
+11,International,SEA,Female,Graduate,31,5,1,Short,1,Low,4,High,Yes,Yes,No,No,No,8,Mild,47,17,12,14,13,9,4,26,95,6,2,6,2,2,2,2,4,2,5,,Yes,No,Yes,No,No,No,No,No,No,Yes,No
+12,International,SA,Male,Graduate,29,5,1,Short,1,Low,4,High,Yes,Yes,No,No,No,1,Min,48,8,11,5,4,7,2,17,54,7,5,7,7,1,1,1,4,2,1,,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No
+13,International,EA,Male,Graduate,23,4,1,Short,3,Average,4,High,Yes,Yes,No,No,No,3,Min,32,9,8,5,4,6,7,18,57,7,5,3,2,2,2,2,2,1,1,,Yes,Yes,No,No,No,No,No,No,No,No,No
+15,International,Others,Female,Graduate,30,5,1,Short,1,Low,5,High,Yes,Yes,No,Yes,Other,6,Mild,40,19,9,5,4,13,2,22,74,7,3,5,3,5,3,5,5,1,1,,Yes,No,Yes,No,Yes,No,Yes,Yes,No,No,No
+16,International,EA,Female,Graduate,31,5,1,Short,1,Low,3,Average,Yes,No,No,No,No,3,Min,48,11,13,7,4,8,5,15,63,6,5,2,2,1,1,1,1,3,1,,Yes,Yes,No,No,No,No,No,No,No,No,No
+17,International,Others,Female,Graduate,29,5,1,Short,1,Low,5,High,Yes,Yes,No,No,No,3,Min,48,16,4,5,4,3,2,13,47,7,5,7,3,1,1,5,1,1,1,,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No
+18,International,SEA,Female,"Under graduate",19,2,1,Short,3,Average,5,High,,No,No,No,No,7,Mild,44,11,8,5,7,4,2,18,55,5,3,6,7,5,2,2,1,1,1,,Yes,No,Yes,Yes,Yes,No,No,No,No,No,No
+19,International,SEA,Male,"Under graduate",25,4,3,Medium,2,Low,4,High,,Yes,No,No,No,1,Min,36,13,10,7,5,3,3,19,60,1,5,1,1,1,1,1,1,6,1,,No,Yes,No,No,No,No,No,No,Yes,No,No
+20,International,SEA,Male,"Under graduate",18,1,1,Short,1,Low,4,High,,No,No,No,No,4,Min,26,18,4,7,4,4,2,27,66,6,4,6,6,6,3,4,3,6,5,,Yes,No,Yes,Yes,Yes,No,No,No,Yes,Yes,No
+22,International,SEA,Male,"Under graduate",19,2,1,Short,1,Low,4,High,,Yes,Yes,Yes,Other,13,Mod,25,25,16,10,11,6,4,22,94,1,2,6,1,1,1,1,1,7,1,,No,No,Yes,No,No,No,No,No,Yes,No,No
+23,International,SEA,Male,"Under graduate",20,2,3,Medium,3,Average,4,High,,No,No,No,No,1,Min,34,24,16,15,12,11,8,37,123,6,7,7,6,6,6,5,6,5,5,,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No
+24,International,EA,Female,"Under graduate",29,5,1,Short,1,Low,3,Average,Yes,No,No,Yes,Other,8,Mild,39,18,8,10,8,7,4,23,78,2,3,7,6,5,5,5,1,1,1,,No,No,Yes,Yes,Yes,Yes,Yes,No,No,No,No
+25,International,Others,Female,Graduate,25,4,8,Long,4,High,4,High,Yes,No,Yes,Yes,Other,10,Mod,44,12,9,9,8,5,3,19,65,2,3,3,3,2,2,2,3,1,3,2,No,No,No,No,No,No,No,No,No,No,No
+26,International,SEA,Female,Graduate,30,5,2,Medium,3,Average,4,High,Yes,Yes,No,Yes,Other,13,Mod,42,23,15,11,9,5,2,26,91,7,3,5,4,7,5,5,6,1,1,5,Yes,No,Yes,No,Yes,Yes,Yes,Yes,No,No,Yes
+27,International,SEA,Female,"Under graduate",17,1,1,Short,2,Low,3,Average,Yes,Yes,Yes,No,No,9,Mild,38,19,9,10,11,7,6,26,88,2,3,3,2,2,3,2,2,3,3,2,No,No,No,No,No,No,No,No,No,No,No
+28,International,SEA,Female,"Under graduate",20,2,2,Medium,3,Average,4,High,No,Yes,No,No,No,6,Mild,46,10,4,5,4,3,2,11,39,1,1,1,1,1,1,1,1,1,1,1,No,No,No,No,No,No,No,No,No,No,No
+29,International,EA,Male,"Under graduate",19,2,1,Short,3,Average,3,Average,No,No,No,No,No,7,Mild,40,39,4,5,4,3,2,15,72,2,2,2,2,2,2,2,2,2,2,2,No,No,No,No,No,No,No,No,No,No,No
+30,International,EA,Female,"Under graduate",18,1,1,Short,3,Average,3,Average,No,No,No,Yes,Other,10,Mod,38,16,9,13,6,6,2,14,66,2,2,2,1,1,1,1,1,1,1,1,No,No,No,No,No,No,No,No,No,No,No
+31,International,SA,Female,"Under graduate",21,3,2,Medium,3,Average,4,High,Yes,Yes,Yes,No,No,9,Mild,43,16,8,10,8,6,4,21,73,2,2,2,2,2,2,2,2,2,2,2,No,No,No,No,No,No,No,No,No,No,No
+32,International,SA,Male,"Under graduate",22,3,2,Medium,3,Average,5,High,No,Yes,Yes,No,No,9,Mild,40,16,9,10,8,6,4,20,73,2,2,2,2,2,2,2,2,2,2,2,No,No,No,No,No,No,No,No,No,No,No
+33,International,SEA,Male,"Under graduate",20,2,2,Medium,3,Average,4,High,Yes,Yes,No,No,No,2,Min,48,8,7,5,4,5,4,12,45,4,3,3,3,1,1,1,1,3,3,1,No,No,No,No,No,No,No,No,No,No,No
+37,International,SEA,Female,"Under graduate",21,3,4,Long,2,Low,4,High,No,No,Yes,Yes,Major,14,Mod,35,20,11,5,4,5,2,16,63,5,7,1,1,5,5,4,1,5,4,5,Yes,Yes,No,No,Yes,Yes,No,No,Yes,No,Yes
+38,International,SEA,Female,"Under graduate",22,3,3,Medium,4,High,4,High,No,Yes,No,No,No,4,Min,44,8,14,5,8,3,4,21,63,5,5,4,1,6,1,1,1,1,1,1,Yes,Yes,No,No,Yes,No,No,No,No,No,No
+40,International,JAP,Female,"Under graduate",21,3,10,Long,5,High,3,Average,No,No,Yes,Yes,Other,13,Mod,32,9,4,10,8,4,2,13,50,1,1,3,1,1,1,1,1,1,1,1,No,No,No,No,No,No,No,No,No,No,No
+41,International,EA,Female,"Under graduate",22,3,3,Medium,3,Average,4,High,Yes,No,No,Yes,Major,15,ModSev,25,23,6,14,12,3,8,26,92,5,5,3,1,1,1,1,1,7,7,3,Yes,Yes,No,No,No,No,No,No,Yes,Yes,No
+43,International,EA,Male,"Under graduate",24,4,2,Medium,4,High,4,High,No,No,No,No,No,4,Min,46,15,9,15,10,6,4,19,78,3,3,3,3,3,3,3,3,1,3,3,No,No,No,No,No,No,No,No,No,No,No
+45,International,SA,Male,"Under graduate",18,1,1,Short,2,Low,4,High,No,No,Yes,Yes,Major,12,Mod,39,18,20,10,8,6,9,23,94,7,7,7,5,6,5,5,5,5,4,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,Yes
+46,International,SEA,Female,"Under graduate",20,2,3,Medium,3,Average,3,Average,No,No,No,No,No,6,Mild,48,8,4,5,4,3,2,10,36,2,3,3,1,1,1,1,1,3,1,2,No,No,No,No,No,No,No,No,No,No,No
+47,International,SEA,Female,"Under graduate",23,4,3,Medium,3,Average,4,High,No,No,No,Yes,Other,7,Mild,40,16,10,10,9,8,4,26,83,4,4,5,2,2,2,2,2,4,1,3,No,No,Yes,No,No,No,No,No,No,No,No
+48,International,Others,Male,"Under graduate",23,4,2,Medium,2,Low,5,High,No,No,No,Yes,Major,13,Mod,15,19,8,21,4,9,2,20,83,1,1,1,1,1,1,1,1,7,1,1,No,No,No,No,No,No,No,No,Yes,No,No
+49,International,Others,Female,"Under graduate",20,2,2,Medium,3,Average,5,High,Yes,No,No,No,No,2,Min,40,25,16,19,8,7,4,30,109,7,5,7,7,5,3,5,1,3,3,3,Yes,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No
+51,International,EA,Male,"Under graduate",21,3,3,Medium,2,Low,4,High,No,No,No,Yes,Other,6,Mild,44,8,4,5,4,3,2,10,36,7,1,7,1,1,1,6,1,1,1,1,Yes,No,Yes,No,No,No,Yes,No,No,No,No
+52,International,Others,Female,"Under graduate",23,4,3,Medium,4,High,5,High,Yes,No,Yes,Yes,Major,19,ModSev,13,25,6,5,12,7,10,39,104,7,1,3,3,3,1,2,1,5,5,4,Yes,No,No,No,No,No,No,No,Yes,Yes,No
+53,International,SEA,Male,"Under graduate",20,2,3,Medium,3,Average,5,High,No,Yes,No,No,No,9,Mild,40,16,10,10,8,8,8,18,78,4,4,2,2,7,1,1,1,3,1,1,No,No,No,No,Yes,No,No,No,No,No,No
+54,International,EA,Female,"Under graduate",23,4,4,Long,3,Average,3,Average,Yes,No,Yes,No,No,10,Mod,32,24,12,15,12,9,6,30,108,4,4,4,3,3,3,3,3,3,3,3,No,No,No,No,No,No,No,No,No,No,No
+56,International,SA,Male,"Under graduate",21,3,1,Short,3,Average,4,High,Yes,Yes,No,No,No,5,Mild,48,11,15,5,4,4,8,21,68,5,3,4,4,1,1,1,6,2,1,1,Yes,No,No,No,No,No,No,Yes,No,No,No
+57,International,SEA,Female,"Under graduate",21,3,3,Medium,1,Low,5,High,No,No,No,Yes,Other,8,Mild,31,16,14,5,5,8,3,35,86,7,7,5,3,4,2,2,1,2,1,3,Yes,Yes,Yes,No,No,No,No,No,No,No,No
+58,International,SEA,Female,"Under graduate",19,2,2,Medium,2,Low,4,High,Yes,No,Yes,Yes,Major,17,ModSev,18,21,12,15,16,7,6,25,102,3,4,3,1,2,1,1,1,5,3,3,No,No,No,No,No,No,No,No,Yes,No,No
+59,International,SEA,Male,"Under graduate",18,1,1,Short,2,Low,4,High,No,Yes,No,No,No,12,Mod,37,16,13,15,10,3,9,22,88,5,5,5,5,3,6,4,7,7,7,7,Yes,Yes,Yes,Yes,No,Yes,No,Yes,Yes,Yes,Yes
+61,International,EA,Male,"Under graduate",18,1,1,Short,2,Low,2,Low,No,No,No,No,No,7,Mild,40,16,8,10,8,6,4,20,72,4,4,4,4,4,4,4,4,4,4,4,No,No,No,No,No,No,No,No,No,No,No
+62,International,SEA,Female,"Under graduate",20,2,1,Short,2,Low,4,High,No,No,No,No,No,5,Mild,48,8,7,10,9,3,5,24,66,6,6,6,5,5,4,4,3,2,2,3,Yes,Yes,Yes,Yes,Yes,No,No,No,No,No,No
+63,International,EA,Male,"Under graduate",18,1,4,Long,3,Average,4,High,No,No,No,No,No,2,Min,40,24,13,25,10,6,6,20,104,1,3,6,6,1,1,1,1,1,1,1,No,No,Yes,Yes,No,No,No,No,No,No,No
+65,International,EA,Female,"Under graduate",20,2,1,Short,3,Average,4,High,No,No,No,No,No,7,Mild,42,14,10,7,6,5,4,17,63,3,3,1,1,2,1,2,1,7,2,1,No,No,No,No,No,No,No,No,Yes,No,No
+66,International,SEA,Male,"Under graduate",19,2,2,Medium,2,Low,3,Average,No,No,No,No,No,5,Mild,41,22,11,14,9,4,3,26,89,3,5,4,4,5,4,5,3,4,5,3,No,Yes,No,No,Yes,No,Yes,No,No,Yes,No
+69,International,EA,Female,"Under graduate",20,2,2,Medium,3,Average,4,High,No,No,Yes,No,No,9,Mild,22,14,9,6,9,8,7,20,73,1,2,3,3,2,1,1,1,6,3,7,No,No,No,No,No,No,No,No,Yes,No,Yes
+73,International,EA,Male,"Under graduate",22,3,2,Medium,3,Average,4,High,Yes,No,No,Yes,Other,9,Mild,48,8,6,5,4,5,2,10,40,7,3,7,7,1,1,1,1,1,1,1,Yes,No,Yes,Yes,No,No,No,No,No,No,No
+74,International,EA,Female,"Under graduate",19,2,1,Short,2,Low,4,High,No,No,No,No,No,5,Mild,46,9,11,5,4,7,2,17,55,7,6,5,1,2,2,2,1,1,1,1,Yes,Yes,Yes,No,No,No,No,No,No,No,No
+77,International,SA,Female,"Under graduate",24,4,3,Medium,4,High,5,High,No,No,No,No,No,2,Min,48,8,8,10,8,6,4,20,64,1,1,2,2,2,2,2,2,2,2,2,No,No,No,No,No,No,No,No,No,No,No
+80,International,EA,Male,"Under graduate",23,4,3,Medium,2,Low,2,Low,Yes,No,No,Yes,Other,10,Mod,47,11,4,5,6,9,2,19,56,7,7,7,7,7,7,7,7,7,5,7,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+84,International,SEA,Male,"Under graduate",20,2,1,Short,1,Low,4,High,No,Yes,Yes,Yes,Other,10,Mod,47,16,14,15,12,5,4,23,89,1,1,1,1,1,1,1,1,1,1,1,No,No,No,No,No,No,No,No,No,No,No
+87,International,SEA,Female,"Under graduate",21,3,4,Long,3,Average,5,High,Yes,No,Yes,Yes,Major,13,Mod,18,21,9,15,14,10,4,28,101,6,3,6,3,4,3,4,3,3,4,4,Yes,No,Yes,No,No,No,No,No,No,No,No
+88,International,EA,Male,"Under graduate",21,3,4,Long,4,High,4,High,Yes,No,No,Yes,Other,13,Mod,43,16,13,7,9,7,2,30,84,7,5,7,5,2,2,5,1,1,1,4,Yes,Yes,Yes,Yes,No,No,Yes,No,No,No,No
+89,International,EA,Female,"Under graduate",18,1,2,Medium,4,High,4,High,No,No,No,No,No,8,Mild,19,24,11,17,12,8,6,34,112,3,3,3,3,3,3,3,3,7,3,3,No,No,No,No,No,No,No,No,Yes,No,No
+90,International,EA,Male,"Under graduate",19,2,1,Short,2,Low,3,Average,No,Yes,No,No,No,8,Mild,45,14,10,10,7,5,2,25,73,5,6,6,4,5,5,5,2,2,3,5,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,Yes
+91,International,SEA,Female,"Under graduate",21,3,2,Medium,3,Average,4,High,No,No,No,No,No,2,Min,48,8,15,5,4,13,5,17,67,4,1,6,6,1,1,1,1,1,1,1,No,No,Yes,Yes,No,No,No,No,No,No,No
+92,International,SEA,Female,"Under graduate",18,1,1,Short,1,Low,3,Average,Yes,No,No,Yes,Major,13,Mod,35,16,15,10,10,10,8,25,94,6,2,3,3,1,1,1,1,5,1,1,Yes,No,No,No,No,No,No,No,Yes,No,No
+96,International,SEA,Male,"Under graduate",21,3,4,Long,4,High,4,High,No,No,No,Yes,Other,6,Mild,42,21,10,15,5,3,2,15,71,5,1,6,3,2,1,2,1,5,4,4,Yes,No,Yes,No,No,No,No,No,Yes,No,No
+98,International,EA,Male,"Under graduate",23,4,2,Medium,3,Average,3,Average,No,No,Yes,Yes,Major,21,Sev,21,32,16,20,12,6,2,13,101,2,2,2,2,3,3,2,1,4,2,3,No,No,No,No,No,No,No,No,No,No,No
+100,International,SA,Male,"Under graduate",20,2,1,Short,2,Low,4,High,No,Yes,No,No,No,4,Min,48,8,4,5,4,3,2,10,36,5,5,5,5,5,5,7,7,7,7,7,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+102,International,EA,Female,"Under graduate",20,2,2,Medium,3,Average,4,High,No,No,Yes,Yes,Other,10,Mod,48,8,4,5,4,3,2,10,36,6,6,6,6,2,6,4,3,1,1,6,Yes,Yes,Yes,Yes,No,Yes,No,No,No,No,Yes
+104,International,SA,Male,"Under graduate",23,4,3,Medium,4,High,5,High,Yes,Yes,No,Yes,Other,6,Mild,40,24,12,10,8,6,4,24,88,5,5,6,1,2,1,2,4,1,6,1,Yes,Yes,Yes,No,No,No,No,No,No,Yes,No
+113,International,SEA,Female,"Under graduate",18,1,1,Short,3,Average,4,High,Yes,No,No,No,No,8,Mild,34,23,11,16,10,11,2,30,103,7,3,4,1,1,5,1,1,7,1,4,Yes,No,No,No,No,Yes,No,No,Yes,No,No
+117,International,JAP,Male,"Under graduate",19,2,1,Short,4,High,4,High,No,No,No,No,No,2,Min,40,24,12,15,12,6,6,30,105,3,3,3,3,3,3,3,3,3,3,3,No,No,No,No,No,No,No,No,No,No,No
+118,International,SEA,Female,"Under graduate",22,3,2,Medium,3,Average,3,Average,No,Yes,No,Yes,Other,9,Mild,31,18,14,7,9,6,7,25,86,5,1,7,6,6,1,6,1,2,1,1,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No
+119,International,SA,Female,"Under graduate",23,4,3,Medium,3,Average,4,High,Yes,Yes,No,No,No,3,Min,40,16,12,5,4,7,4,15,63,5,4,7,7,5,5,5,5,4,2,5,Yes,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes
+120,International,SEA,Male,"Under graduate",21,3,3,Medium,4,High,4,High,Yes,Yes,No,Yes,Major,17,ModSev,30,15,7,6,6,5,2,29,70,7,5,6,5,2,2,2,2,4,4,2,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No
+122,International,SEA,Female,"Under graduate",21,3,3,Medium,3,Average,4,High,No,No,No,No,No,5,Mild,47,11,16,5,4,3,2,17,58,3,3,7,7,6,5,5,5,1,3,6,No,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,Yes
+127,International,Others,Female,"Under graduate",21,3,1,Short,1,Low,5,High,No,Yes,Yes,No,No,9,Mild,40,18,14,10,8,6,4,20,80,2,2,2,2,2,2,2,2,2,2,2,No,No,No,No,No,No,No,No,No,No,No
+129,International,SA,Male,"Under graduate",22,3,3,Medium,3,Average,4,High,No,Yes,No,No,No,6,Mild,41,16,11,10,8,6,4,20,75,2,2,2,2,2,2,2,2,2,2,2,No,No,No,No,No,No,No,No,No,No,No
+131,International,Others,Male,"Under graduate",19,2,1,Short,4,High,5,High,No,No,No,No,No,8,Mild,41,20,9,8,12,7,3,20,79,4,5,3,2,7,5,7,3,3,3,2,No,Yes,No,No,Yes,Yes,Yes,No,No,No,No
+132,International,SEA,Male,"Under graduate",27,5,6,Long,3,Average,5,High,Yes,Yes,No,Yes,Other,10,Mod,35,8,4,5,4,3,2,16,42,7,5,3,4,1,1,1,3,2,1,4,Yes,Yes,No,No,No,No,No,No,No,No,No
+140,International,EA,Female,"Under graduate",22,3,3,Medium,3,Average,4,High,Yes,No,Yes,Yes,Major,14,Mod,25,30,14,18,15,11,7,37,132,5,6,6,6,5,5,6,5,5,5,5,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes,Yes
+147,International,SEA,Female,"Under graduate",22,3,3,Medium,3,Average,4,High,Yes,No,No,Yes,Other,10,Mod,48,12,5,7,7,4,5,21,61,7,6,6,3,6,5,5,1,3,1,7,Yes,Yes,Yes,No,Yes,Yes,Yes,No,No,No,Yes
+148,International,EA,Female,"Under graduate",18,1,1,Short,3,Average,4,High,No,No,No,No,No,4,Min,34,18,10,10,11,7,3,20,79,6,6,6,6,5,6,6,1,1,1,4,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No
+151,International,SA,Male,"Under graduate",24,4,1,Short,3,Average,4,High,Yes,No,No,No,No,8,Mild,44,12,6,9,8,6,4,20,65,1,2,1,2,1,2,1,2,1,2,2,No,No,No,No,No,No,No,No,No,No,No
+154,International,EA,Female,"Under graduate",21,3,2,Medium,3,Average,4,High,No,No,No,No,No,5,Mild,45,12,7,7,4,8,2,13,53,3,5,3,1,1,1,1,1,1,1,1,No,Yes,No,No,No,No,No,No,No,No,No
+158,International,EA,Male,"Under graduate",21,3,1,Short,1,Low,4,High,Yes,Yes,No,No,No,5,Mild,43,8,12,5,6,3,2,10,46,1,1,1,1,1,1,1,1,1,1,1,No,No,No,No,No,No,No,No,No,No,No
+163,International,EA,Female,"Under graduate",21,3,3,Medium,3,Average,5,High,No,No,No,No,No,11,Mod,47,11,5,5,5,7,2,15,50,6,7,4,5,3,1,1,1,3,1,4,Yes,Yes,No,Yes,No,No,No,No,No,No,No
+169,International,SA,Male,"Under graduate",25,4,1,Short,2,Low,5,High,No,Yes,No,Yes,Other,9,Mild,32,22,12,12,5,9,2,28,90,7,4,6,7,5,4,5,3,4,4,3,Yes,No,Yes,Yes,Yes,No,Yes,No,No,No,No
+170,International,SA,Female,"Under graduate",21,3,1,Short,2,Low,4,High,No,Yes,No,No,No,1,Min,42,12,4,10,5,3,2,10,46,7,1,2,2,7,3,7,1,1,1,1,Yes,No,No,No,Yes,No,Yes,No,No,No,No
+182,International,SEA,Female,"Under graduate",22,3,4,Long,3,Average,4,High,Yes,No,No,No,No,7,Mild,26,8,7,5,7,12,4,25,68,7,7,6,1,3,1,1,1,5,1,4,Yes,Yes,Yes,No,No,No,No,No,Yes,No,No
+184,International,SEA,Female,"Under graduate",19,2,1,Short,2,Low,4,High,No,No,No,No,No,4,Min,38,19,14,9,4,7,2,29,84,6,5,4,1,5,5,4,3,2,2,5,Yes,Yes,No,No,Yes,Yes,No,No,No,No,Yes
+192,International,SA,Male,"Under graduate",25,4,4,Long,3,Average,4,High,No,No,Yes,Yes,Major,13,Mod,17,35,16,21,13,11,4,29,129,7,6,6,1,2,1,2,2,1,1,3,Yes,Yes,Yes,No,No,No,No,No,No,No,No
+196,International,SEA,Male,"Under graduate",25,4,7,Long,3,Average,4,High,Yes,No,No,No,No,4,Min,48,11,7,5,5,4,2,11,45,3,3,4,3,2,1,1,1,2,2,4,No,No,No,No,No,No,No,No,No,No,No
+198,International,SEA,Female,"Under graduate",20,2,3,Medium,3,Average,5,High,Yes,No,Yes,Yes,Major,16,ModSev,21,14,20,7,10,8,9,27,95,1,1,1,1,6,6,6,1,1,7,7,No,No,No,No,Yes,Yes,Yes,No,No,Yes,Yes
+206,Domestic,JAP,Female,Graduate,27,5,2,Medium,3,Average,3,Average,Yes,Yes,No,Yes,Major,12,Mod,47,16,11,5,8,7,3,31,81,7,3,7,1,6,6,1,5,4,1,,Yes,No,Yes,No,Yes,Yes,No,Yes,No,No,No
+207,Domestic,JAP,Female,"Under graduate",18,1,1,Short,5,High,3,Average,No,No,No,No,No,9,Mild,48,9,4,5,4,3,2,10,37,4,4,4,4,1,1,1,1,1,1,4,No,No,No,No,No,No,No,No,No,No,No
+208,Domestic,JAP,Female,"Under graduate",21,3,3,Medium,5,High,3,Average,Yes,No,No,No,No,7,Mild,40,16,8,10,8,6,4,20,72,6,6,7,1,1,1,5,1,1,1,4,Yes,Yes,Yes,No,No,No,Yes,No,No,No,No
+209,Domestic,JAP,Male,"Under graduate",20,2,3,Medium,5,High,1,Low,No,No,No,No,No,3,Min,47,11,4,5,4,5,2,12,43,1,5,5,3,1,1,3,1,1,1,3,No,Yes,Yes,No,No,No,No,No,No,No,No
+212,Domestic,JAP,Female,"Under graduate",18,1,1,Short,5,High,3,Average,No,No,No,No,No,6,Mild,42,14,6,10,4,5,4,28,71,6,4,6,4,4,5,5,3,2,2,2,Yes,No,Yes,No,No,Yes,Yes,No,No,No,No
+213,Domestic,JAP,Female,"Under graduate",22,3,4,Long,5,High,3,Average,No,No,No,No,No,0,Min,48,8,4,5,4,3,2,10,36,5,7,7,5,5,5,5,1,1,3,3,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No
+214,Domestic,JAP,Female,"Under graduate",22,3,4,Long,5,High,1,Low,No,Yes,Yes,Yes,Major,13,Mod,24,17,15,11,11,7,6,29,96,2,2,2,2,2,2,2,2,5,2,2,No,No,No,No,No,No,No,No,Yes,No,No
+218,Domestic,JAP,Female,"Under graduate",20,2,3,Medium,5,High,2,Low,Yes,No,Yes,Yes,Major,21,Sev,14,17,11,10,10,6,4,19,77,1,4,7,6,2,2,2,1,1,2,4,No,No,Yes,Yes,No,No,No,No,No,No,No
+219,Domestic,JAP,Male,"Under graduate",21,3,2,Medium,5,High,3,Average,No,No,Yes,Yes,Major,23,Sev,8,10,5,5,4,3,3,13,43,1,1,2,1,6,4,5,2,7,4,4,No,No,No,No,Yes,No,Yes,No,Yes,No,No
+221,Domestic,JAP,Male,"Under graduate",20,2,2,Medium,5,High,3,Average,No,No,No,No,No,13,Mod,47,8,12,5,4,10,7,20,66,5,5,7,5,4,4,4,2,1,4,1,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No
+223,Domestic,JAP,Male,"Under graduate",21,3,4,Long,2,Low,5,High,Yes,No,Yes,No,No,11,Mod,24,27,8,14,12,10,4,21,96,4,4,4,4,4,4,4,4,6,1,4,No,No,No,No,No,No,No,No,Yes,No,No
+224,Domestic,JAP,Female,"Under graduate",22,3,1,Short,5,High,5,High,Yes,No,No,No,No,5,Mild,28,16,4,5,4,3,2,10,44,6,2,1,1,1,1,1,1,6,1,1,Yes,No,No,No,No,No,No,No,Yes,No,No
+226,Domestic,JAP,Male,"Under graduate",21,3,1,Short,4,High,3,Average,Yes,Yes,No,No,No,8,Mild,48,8,4,5,4,3,2,10,36,7,7,7,7,4,1,2,1,1,1,1,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No
+227,Domestic,JAP,Female,"Under graduate",19,2,2,Medium,5,High,3,Average,No,No,No,No,No,8,Mild,39,8,5,10,5,4,4,24,60,3,5,3,1,1,1,1,1,3,2,3,No,Yes,No,No,No,No,No,No,No,No,No
+228,Domestic,JAP,Male,"Under graduate",23,4,4,Long,5,High,3,Average,No,Yes,No,No,No,11,Mod,38,17,8,10,8,6,4,21,74,7,7,7,5,4,4,4,3,2,2,3,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No
+232,Domestic,JAP,Male,"Under graduate",18,1,1,Short,5,High,4,High,No,No,No,Yes,Major,16,ModSev,34,24,8,20,11,4,4,19,90,5,5,5,3,3,3,3,2,2,1,2,Yes,Yes,Yes,No,No,No,No,No,No,No,No
+235,Domestic,JAP,Male,"Under graduate",20,2,3,Medium,5,High,2,Low,Yes,Yes,Yes,Yes,Major,14,Mod,24,28,15,13,11,10,6,29,112,5,4,4,3,5,5,4,3,4,5,5,Yes,No,No,No,Yes,Yes,No,No,No,Yes,Yes
+236,Domestic,JAP,Male,"Under graduate",19,2,1,Short,3,Average,4,High,No,No,Yes,No,No,9,Mild,24,24,8,15,12,6,4,20,89,3,3,3,3,4,3,3,4,3,3,3,No,No,No,No,No,No,No,No,No,No,No
+239,Domestic,JAP,Female,"Under graduate",23,4,3,Medium,5,High,4,High,No,No,No,No,No,10,Mod,28,18,9,10,11,7,2,18,75,3,3,7,3,3,3,3,3,3,3,3,No,No,Yes,No,No,No,No,No,No,No,No
+240,Domestic,JAP,Female,"Under graduate",20,2,1,Short,5,High,3,Average,No,No,No,Yes,Other,12,Mod,28,10,5,13,8,8,3,19,66,5,5,4,1,7,4,6,1,2,1,7,Yes,Yes,No,No,Yes,No,Yes,No,No,No,Yes
+242,Domestic,JAP,Female,"Under graduate",19,2,1,Short,5,High,2,Low,No,No,No,Yes,Other,11,Mod,20,9,14,8,4,7,5,25,72,4,2,7,1,1,1,1,1,6,1,6,No,No,Yes,No,No,No,No,No,Yes,No,Yes
+244,Domestic,JAP,Female,"Under graduate",20,2,2,Medium,5,High,4,High,No,No,No,No,No,3,Min,48,9,14,5,6,6,2,16,58,5,5,6,3,3,3,4,1,1,1,1,Yes,Yes,Yes,No,No,No,No,No,No,No,No
+247,Domestic,JAP,Female,"Under graduate",19,2,1,Short,5,High,3,Average,No,No,No,No,No,9,Mild,47,8,7,5,5,3,2,13,43,5,7,7,6,7,7,7,1,1,1,2,Yes,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,No
+250,Domestic,JAP,Female,"Under graduate",19,2,2,Medium,5,High,2,Low,No,No,No,No,No,7,Mild,34,15,20,5,4,6,6,28,84,1,5,7,5,5,5,5,1,1,1,7,No,Yes,Yes,Yes,Yes,Yes,Yes,No,No,No,Yes
+251,Domestic,JAP,Female,"Under graduate",24,4,5,Long,5,High,3,Average,Yes,No,No,No,No,10,Mod,36,15,11,6,4,7,3,21,67,6,4,6,3,7,2,4,1,1,4,1,Yes,No,Yes,No,Yes,No,No,No,No,No,No
+253,Domestic,JAP,Male,"Under graduate",21,3,3,Medium,5,High,2,Low,Yes,Yes,No,No,No,6,Mild,48,12,14,5,4,3,2,29,69,5,5,5,5,1,1,1,1,1,1,1,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No
+256,Domestic,JAP,Male,"Under graduate",23,4,5,Long,5,High,3,Average,Yes,No,Yes,Yes,Major,13,Mod,32,24,12,16,12,9,6,30,109,4,4,4,4,4,4,4,4,4,4,4,No,No,No,No,No,No,No,No,No,No,No
+260,Domestic,JAP,Male,"Under graduate",22,3,4,Long,5,High,3,Average,No,No,No,No,No,0,Min,48,8,4,5,4,3,2,10,36,1,1,1,1,1,1,1,1,1,1,1,No,No,No,No,No,No,No,No,No,No,No
+262,Domestic,JAP,Male,"Under graduate",19,2,1,Short,5,High,4,High,No,No,No,No,No,9,Mild,37,22,4,10,5,8,2,16,67,5,2,1,1,1,7,1,1,7,1,7,Yes,No,No,No,No,Yes,No,No,Yes,No,Yes
+268,Domestic,JAP,Female,"Under graduate",21,3,4,Long,5,High,4,High,No,Yes,No,No,No,8,Mild,27,16,9,10,8,7,4,20,74,1,7,5,1,3,3,3,1,1,1,6,No,Yes,Yes,No,No,No,No,No,No,No,Yes
+269,Domestic,JAP,Female,"Under graduate",22,3,3,Medium,3,Average,4,High,Yes,Yes,No,No,No,2,Min,48,8,10,5,4,3,4,16,50,7,7,7,7,2,2,2,2,2,1,3,Yes,Yes,Yes,Yes,No,No,No,No,No,No,No
