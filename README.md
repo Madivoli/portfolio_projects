@@ -233,6 +233,7 @@ Step 4. Removing duplicate records using a WHERE clause:
 <img width="990" height="735" alt="image" src="https://github.com/user-attachments/assets/7f6f884d-1a0d-49e1-931f-338d5bc453c0" />
 
 --- Inferential Statistics
+
 	● Correlation between inter_dom and todep:
 
 		SELECT
@@ -252,7 +253,8 @@ Step 4. Removing duplicate records using a WHERE clause:
 <img width="949" height="118" alt="image" src="https://github.com/user-attachments/assets/90612b52-de4a-4dd4-a6c7-e94772315ac1" />
 
 **Results**
-	## Depression and International/Domestic Status
+
+	## Depression and students' (international or domestic) status
 	Coefficient: 0.07138804926
 	● The coefficient suggests **a very weak positive correlation**.
 	● Given that the value is close to zero, there is **no significant linear relationship** between a student's status as either international or domestic and their depression score.
@@ -266,42 +268,82 @@ Step 4. Removing duplicate records using a WHERE clause:
 	● The negative sign suggests that, on average, males may have slightly lower depression scores than females. However, this difference is minimal.
 
 
+	## Correlation between depression and social connectedness
+		SELECT
+			(COUNT(*) * SUM(tosc * todep) - SUM(tosc) * SUM(todep)) /
+			(SQRT(COUNT(*) * SUM(tosc * tosc) - SUM(tosc) * SUM(tosc)) *
+			SQRT(COUNT(*) * SUM(todep * todep) - SUM(todep) * SUM(todep))) AS sc_corr,
 
-## INFERENTIAL STATISTICS
+	## Correlation between depression and acculturative stress
+	
+			(COUNT(*) * SUM(toas * todep) - SUM(toas) * SUM(todep)) /
+			(SQRT(COUNT(*) * SUM(toas * toas) - SUM(toas) * SUM(toas)) *
+			SQRT(COUNT(*) * SUM(todep * todep) - SUM(todep) * SUM(todep))) AS as_corr
+		FROM students_info_staging
+		WHERE tosc IS NOT NULL 
+		AND todep IS NOT NULL
+		AND toas IS NOT NULL;
 
-## Depression and International/Domestic Status
+<img width="951" height="119" alt="image" src="https://github.com/user-attachments/assets/2eb47348-ee98-41d6-aebc-05c07bf3d4aa" />
+
+**Results**:
+
+	## Depression and social connectedness
+	Correlation coefficient: -0.5464
+	● A **moderately strong negative** relationship exists between depression and social connectedness.
+	● A negative correlation indicates that as one variable increases, the other typically decreases.
+	● This implies that as students’ social connectedness (tosc) increases, their depression scores (todep) tend to decline.
+	● These findings align with established psychological theories and research, which frequently associate stronger social support and connections with lower levels of depression.
+
+	## Depression and acculturative stress
+	Correlation coefficient: 0.3685
+	● There is a weak moderate positive correlation between depression and acculturative stress.
+	● A positive correlation indicates that as one variable increases, the other also tends to increase.
+	● Consequently, as a student's acculturative stress (toas) rises, their depression score (todep) also tends to increase.
+	● This finding aligns with existing psychological research, which frequently identifies the stress associated with adapting to a new culture as a risk factor for mental health issues such as depression.
 
 
+	## Correlation between depression and length of stay
+		SELECT
+			(COUNT(*) * SUM(stay * todep) - SUM(stay) * SUM(todep)) /
+			(SQRT(COUNT(*) * SUM(stay * stay) - SUM(stay) * SUM(stay)) *
+			SQRT(COUNT(*) * SUM(todep * todep) - SUM(todep) * SUM(todep))) AS stay_dep_corr,
+
+	## Correlation between length of stay and social connectedness
+	
+			(COUNT(*) * SUM(stay * tosc) - SUM(stay) * SUM(tosc)) /
+			(SQRT(COUNT(*) * SUM(stay * stay) - SUM(stay) * SUM(stay)) *
+			SQRT(COUNT(*) * SUM(tosc * tosc) - SUM(tosc) * SUM(tosc))) AS stay_sc_corr,
+		
+	## Correlation between length of stay and acculturative stress
+	
+			(COUNT(*) * SUM(stay * todep) - SUM(stay) * SUM(todep)) /
+			(SQRT(COUNT(*) * SUM(stay * stay) - SUM(stay) * SUM(stay)) *
+			SQRT(COUNT(*) * SUM(toas * toas) - SUM(toas) * SUM(toas))) AS stay_as_corr
+		
+		FROM students_info_staging
+		WHERE stay IS NOT NULL 
+		AND tosc IS NOT NULL
+   		AND todep IS NOT NULL
+		AND toas IS NOT NULL;
+ 
+<img width="948" height="114" alt="image" src="https://github.com/user-attachments/assets/3aa6e91d-30b2-4bf8-bf76-a52fefda09b5" />
+
+**Results:**
+
+	## Depression and length of stay
+	● A **weak positive correlation** exists between depression and length of stay **(r = 0.0631)**, indicating that as a student's duration of stay increases, there is minimal change in their level of depression. 
+
+	## Length of stay and social connectedness
+	● There is a  **weak negative relationship** between length of stay and social connectedness **(r = -0.0405)**, suggesting that the duration of stay has little to no effect on social connectedness.
 
 
-  
-## Depression and Social Connectedness
-Correlation: -0.5464
-● A moderately strong negative relationship exists between depression and social connectedness.
-● A negative correlation indicates that as one variable increases, the other typically decreases.
-● This implies that as students’ social connectedness (tosc) increases, their depression scores (todep) tend to decline.
-● These findings align with established psychological theories and research, which frequently associate stronger social support and connections with lower levels of depression.
-
-## Depression and Acculturative Stress
-Correlation: 0.3685
-● There is a weak moderate positive correlation between depression and acculturative stress.
-● A positive correlation indicates that as one variable increases, the other also tends to increase.
-● Consequently, as a student's acculturative stress (toas) rises, their depression score (todep) also tends to increase.
-● This finding aligns with existing psychological research, which frequently identifies the stress associated with adapting to a new culture as a risk factor for mental health issues such as depression.
-
-## Depression and length of stay
-● A **weak positive correlation** exists between depression and length of stay **(r = 0.0631)**, indicating that as a student's duration of stay increases, there is minimal change in their level of depression. 
-
-## Length of stay and Social Connectedness
-● There is a  **weak negative relationship** between length of stay and social connectedness **(r = -0.0405)**, suggesting that the duration of stay has little to no effect on social connectedness.
-
-
-## Length of stay and Acculturative Stress
-● There is a **weak positive correlation** between length of stay and acculturative stress **(r = 0.0040)**, implying nearly no linear relationship between 
+	## Length of stay and acculturative Stress
+	● There is a **weak positive correlation** between length of stay and acculturative stress **(r = 0.0040)**, implying nearly no linear relationship between 
 
 
 ## CONCLUSION
 
-**In summary, the correlation analysis reveals that neither a student's international/domestic status nor their gender demonstrates a significant linear relationship with their depression score**.
+	**In summary, the correlation analysis reveals that neither a student's international/domestic status nor their gender demonstrates a significant linear relationship with their depression score**.
 
-**To gain deeper insights into these relationships, further exploration using more advanced statistical techniques, such as ANOVA or regression, could be beneficial**.
+	**To gain deeper insights into these relationships, further exploration using more advanced statistical techniques, such as ANOVA or regression, could be beneficial**.
