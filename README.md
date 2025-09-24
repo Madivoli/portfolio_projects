@@ -234,14 +234,14 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 --- Inferential Statistics
 
-	● Correlation between inter_dom and todep:
+## Correlation between students' status and depression:
 
 		SELECT
     		(COUNT(*) * SUM((inter_dom = 'International') * todep) - SUM(inter_dom = 'International') * SUM(todep)) /
     		(SQRT(COUNT(*) * SUM(inter_dom = 'International') - SUM(inter_dom = 'International') * SUM(inter_dom = 'International')) *
      		SQRT(COUNT(*) * SUM(todep * todep) - SUM(todep) * SUM(todep))) AS inter_dom_corr,
     
-	● Correlation between gender and todep:
+## Correlation between gender and depression:
 	 
     		(COUNT(*) * SUM((gender = 'Male') * todep) - SUM(gender = 'Male') * SUM(todep)) /
     		(SQRT(COUNT(*) * SUM(gender = 'Male') - SUM(gender = 'Male') * SUM(gender = 'Male')) *
@@ -254,27 +254,28 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 **Results**
 
-	## Depression and students' (international or domestic) status
+## Depression and students' (international or domestic) status
 	Coefficient: 0.07138804926
 	● The coefficient suggests **a very weak positive correlation**.
 	● Given that the value is close to zero, there is **no significant linear relationship** between a student's status as either international or domestic and their depression score.
 	● The slight positive value indicates that, on average, international students may have marginally higher depression scores than their domestic counterparts.
 	● However, this association is **statistically insignificant**.
 
-	## Depression and Gender
+##  Depression and gender
+
 	Correlation Coefficient: -0.0127866035
 	● This value signifies **a very weak negative correlation**.
 	● Since the coefficient is close to zero, there is **no linear relationship** between a student's gender and their depression score.
 	● The negative sign suggests that, on average, males may have slightly lower depression scores than females. However, this difference is minimal.
 
 
-	## Correlation between depression and social connectedness
+## Correlation between depression and social connectedness
 		SELECT
 			(COUNT(*) * SUM(tosc * todep) - SUM(tosc) * SUM(todep)) /
 			(SQRT(COUNT(*) * SUM(tosc * tosc) - SUM(tosc) * SUM(tosc)) *
 			SQRT(COUNT(*) * SUM(todep * todep) - SUM(todep) * SUM(todep))) AS sc_corr,
 
-	## Correlation between depression and acculturative stress
+## Correlation between depression and acculturative stress
 	
 			(COUNT(*) * SUM(toas * todep) - SUM(toas) * SUM(todep)) /
 			(SQRT(COUNT(*) * SUM(toas * toas) - SUM(toas) * SUM(toas)) *
@@ -288,14 +289,16 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 **Results**:
 
-	## Depression and social connectedness
+## Depression and social connectedness
+
 	Correlation coefficient: -0.5464
 	● A **moderately strong negative** relationship exists between depression and social connectedness.
 	● A negative correlation indicates that as one variable increases, the other typically decreases.
 	● This implies that as students’ social connectedness (tosc) increases, their depression scores (todep) tend to decline.
 	● These findings align with established psychological theories and research, which frequently associate stronger social support and connections with lower levels of depression.
 
-	## Depression and acculturative stress
+## Depression and acculturative stress
+
 	Correlation coefficient: 0.3685
 	● There is a weak moderate positive correlation between depression and acculturative stress.
 	● A positive correlation indicates that as one variable increases, the other also tends to increase.
@@ -303,19 +306,20 @@ Step 4. Removing duplicate records using a WHERE clause:
 	● This finding aligns with existing psychological research, which frequently identifies the stress associated with adapting to a new culture as a risk factor for mental health issues such as depression.
 
 
-	## Correlation between depression and length of stay
+## Correlation between depression and length of stay
+
 		SELECT
 			(COUNT(*) * SUM(stay * todep) - SUM(stay) * SUM(todep)) /
 			(SQRT(COUNT(*) * SUM(stay * stay) - SUM(stay) * SUM(stay)) *
 			SQRT(COUNT(*) * SUM(todep * todep) - SUM(todep) * SUM(todep))) AS stay_dep_corr,
 
-	## Correlation between length of stay and social connectedness
+## Correlation between length of stay and social connectedness
 	
 			(COUNT(*) * SUM(stay * tosc) - SUM(stay) * SUM(tosc)) /
 			(SQRT(COUNT(*) * SUM(stay * stay) - SUM(stay) * SUM(stay)) *
 			SQRT(COUNT(*) * SUM(tosc * tosc) - SUM(tosc) * SUM(tosc))) AS stay_sc_corr,
 		
-	## Correlation between length of stay and acculturative stress
+## Correlation between length of stay and acculturative stress
 	
 			(COUNT(*) * SUM(stay * todep) - SUM(stay) * SUM(todep)) /
 			(SQRT(COUNT(*) * SUM(stay * stay) - SUM(stay) * SUM(stay)) *
@@ -331,19 +335,19 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 **Results:**
 
-	## Depression and length of stay
+## Depression and length of stay
 	● A **weak positive correlation** exists between depression and length of stay **(r = 0.0631)**, indicating that as a student's duration of stay increases, there is minimal change in their level of depression. 
 
-	## Length of stay and social connectedness
+## Length of stay and social connectedness
 	● There is a  **weak negative relationship** between length of stay and social connectedness **(r = -0.0405)**, suggesting that the duration of stay has little to no effect on social connectedness.
 
 
-	## Length of stay and acculturative Stress
+## Length of stay and acculturative Stress
 	● There is a **weak positive correlation** between length of stay and acculturative stress **(r = 0.0040)**, implying nearly no linear relationship between 
 
 
 ## CONCLUSION
 
-	**In summary, the correlation analysis reveals that neither a student's international/domestic status nor their gender demonstrates a significant linear relationship with their depression score**.
+**In summary, the correlation analysis reveals that neither a student's international/domestic status nor their gender demonstrates a significant linear relationship with their depression score**.
 
-	**To gain deeper insights into these relationships, further exploration using more advanced statistical techniques, such as ANOVA or regression, could be beneficial**.
+**To gain deeper insights into these relationships, further exploration using more advanced statistical techniques, such as ANOVA or regression, could be beneficial**.
