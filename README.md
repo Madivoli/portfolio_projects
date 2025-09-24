@@ -232,7 +232,7 @@ Step 4. Removing duplicate records using a WHERE clause:
 
 <img width="990" height="735" alt="image" src="https://github.com/user-attachments/assets/7f6f884d-1a0d-49e1-931f-338d5bc453c0" />
 
-INFERENTIAL STATISTICS
+## INFERENTIAL STATISTICS
 
 ## Correlation between students' status and depression:
 
@@ -255,6 +255,7 @@ INFERENTIAL STATISTICS
 **Results**
 
 Depression and students' (international or domestic) status
+
 	Coefficient: 0.07138804926
 	● The coefficient suggests **a very weak positive correlation**.
 	● Given that the value is close to zero, there is **no significant linear relationship** between a student's status as either international or domestic and their depression score.
